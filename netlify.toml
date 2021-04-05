@@ -1,7 +1,37 @@
 [build]
-  publish = "exampleSite/public"
-  command = "cd exampleSite && hugo --gc --themesDir ../.."
-  
-[build.environment]
-  HUGO_VERSION = "0.71.1"
-  HUGO_THEME = "repo"
+publish = "public"
+# 发布百度SEO校验文件
+command = "hugo --gc --minify && ls && mv baidu_verify_code-YNQgjspRJJ.html public"
+#functions = "functions"
+#[build.environment]
+  # Change this path with the path to your repository
+#GO_IMPORT_PATH = "github.com/netlify/aws-lambda-go-example"
+
+[context.production.environment]
+HUGO_VERSION = "0.79.1"
+HUGO_ENV = "production"
+HUGO_ENABLEGITINFO = "true" 
+
+[context.split1]
+command = "hugo  --gc --minify --enableGitInfo"
+
+[context.split1.environment]
+HUGO_VERSION = "0.79.1"
+HUGO_ENV = "production"
+
+[context.deploy-preview]
+command = "hugo  --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+
+[context.deploy-preview.environment]
+HUGO_VERSION = "0.79.1"
+
+#[context.branch-deploy]
+#command = "hugo  --gc --minify -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy.environment]
+HUGO_VERSION = "0.79.1"
+
+[context.next.environment]
+HUGO_ENABLEGITINFO = "true"
+
+

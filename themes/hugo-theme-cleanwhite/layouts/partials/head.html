@@ -1,0 +1,51 @@
+<head>
+    <meta name="google-site-verification" content="9vIieCe-Qpd78QOmBl63rGtIVbhY6sYyuxX3j8XWBA4" />
+    <meta name="baidu-site-verification" content="LRrmH41lz7" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- lyp baidu-site -->
+    <meta name="baidu-site-verification" content="HGLXRsUXC4" />
+
+    {{ if .Params.description }}
+    <meta name="description" content="{{ .Params.description }}">
+    {{ else }}
+    <meta name="description" content="{{ .Site.Params.description }}">
+    {{ end }}
+    <meta name="keyword"  content="{{ .Site.Params.keyword }}">
+    <link rel="shortcut icon" href="{{ "img/favicon.ico" | absURL }}">
+
+    <title>{{ if .Title }}{{ .Title }}-{{ .Site.Params.SEOTitle }}{{ else }}{{ .Site.Params.SEOTitle }}{{ end }}</title>
+
+    <link rel="canonical" href="{{ .URL | absURL }}">
+
+    <link rel="stylesheet" href="{{ "https://res.cloudinary.com/lyp/raw/upload/v1537369740/hugo/css/iDisqus.min.css" | absURL }}"/>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="{{ "https://res.cloudinary.com/lyp/raw/upload/v1537369744/hugo/css/bootstrap.min.css" | absURL }}">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ "https://res.cloudinary.com/lyp/raw/upload/v1537369740/hugo/css/hux-blog.min.css" | absURL }}">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="{{ "https://res.cloudinary.com/lyp/raw/upload/v1537369740/hugo/css/syntax.css" | absURL }}">
+
+    <!-- Custom Fonts -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!--
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    -->
+    <!-- jQuery -->
+    <script src="{{ "https://res.cloudinary.com/lyp/raw/upload/v1537369966/hugo/js/jquery.min.js" | absURL }}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ "https://res.cloudinary.com/lyp/raw/upload/v1537369966/hugo/js/bootstrap.min.js" | absURL }}"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{{ "https://res.cloudinary.com/lyp/raw/upload/v1537369964/hugo/js/hux-blog.min.js" | absURL }}"></script>
+
+    <!--cloudflare 分析-->
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f73bc0092aeb491d89984c0eb5a87ac2"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+
